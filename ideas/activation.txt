@@ -1,0 +1,7 @@
+Activation of the extension:
+
+All the projects we envisage using our VSCode extension will have an array of different files including jar files, various schema files, XSLT, and other predictable content. They will also all have a settings.json file for project configuration. But it's probably a good idea to invent an extension-specific file such as hcmcVscXml.txt, which need not contain anything meaningful, to identify the project as requiring the extension to be activated. Then we can activate the extension using the workspaceContains Activation Event:
+
+"activationEvents": [
+    "workspaceContains:**/hcmcVscXml.txt"
+]
