@@ -6,4 +6,4 @@ All the projects we envisage using our VSCode extension will have an array of di
     "workspaceContains:**/*.hcmc"
 ]
 
-This is tested and working.
+This is tested and working. However, it's not clear yet whether we can deactivate the extension appropriately. Ideally, it would deactivate when switching to a project folder which does not contain such a file, but there is no deactivationEvents component of the API. There are events such as vscode.workspace.onDidChangeWorkspaceFolders, though, so we can experiment a bit there.
